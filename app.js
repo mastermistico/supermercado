@@ -31,4 +31,6 @@ connection.once('open', () => {
 console.log("MongoDB database connection established successfully");
 });
 
-app.listen(3000);
+const port_number = server.listen(process.env.PORT || 3000);
+
+app.listen(port_number);
