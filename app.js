@@ -10,12 +10,12 @@ app.use(bodyParser.json());
 
 //Import Routes
 const productRoute = require('./routes/products');
-
-app.use('/products',productRoute);
+const uri = process.env.PATH_API
+app.use(`${uri}/products`,productRoute);
 
 //ROUTES
 app.get('/',(req,res) =>{
-    res.send('we home');
+    res.send('home');
 });
 
 
