@@ -1,0 +1,102 @@
+{
+	"variables": [],
+	"info": {
+		"name": "tiempo",
+		"_postman_id": "000ac8c0-1c21-5a4d-a99c-ba01cb221ffc",
+		"description": "crud api de tiempo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all products",
+			"request": {
+				"url": "https://tiempo-supermercado.herokuapp.com/api/1/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "save products",
+			"request": {
+				"url": "https://tiempo-supermercado.herokuapp.com/api/1/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"producto2\",\n    \"description\": \"desc prod 2\",\n    \"price\": \"3000\"\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "product by id",
+			"request": {
+				"url": "https://tiempo-supermercado.herokuapp.com/api/1/products/5e8fcff32f2f7c0024f69e87",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"producto2\",\n    \"description\": \"desc prod 2\",\n    \"price\": \"3000\"\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"url": "https://tiempo-supermercado.herokuapp.com/api/1/products/5e8fcff32f2f7c0024f69e87",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"producto200\"\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update product copy",
+			"request": {
+				"url": "https://tiempo-supermercado.herokuapp.com/api/1/products/5e8fcff32f2f7c0024f69e87",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"producto200\"\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
